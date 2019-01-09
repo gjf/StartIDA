@@ -5,7 +5,7 @@ At the present time the following is copied/deleted:
 
 .\BinDiff\INI <==> %appdata%\zynamics\
 .\Hex-Rays <==> %appdata%\Hex-Rays\
-HKEY_CURRENT_USER\Software\Hex-Rays
+settings.dat <==> HKEY_CURRENT_USER\Software\Hex-Rays
 
 Syntax:
 
