@@ -1,7 +1,7 @@
 # StartIDA
 IDA portabilizer - Starts IDA and copies/deletes settings from folders and registry.
 Works with IDA 6.x (as 7.0 is a crap).
-At the present time the following is copies/deletes:
+At the present time the following is copied/deleted:
 
 .\BinDiff\INI <==> %appdata%\zynamics\
 .\Hex-Rays <==> %appdata%\Hex-Rays\
