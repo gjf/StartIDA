@@ -21,6 +21,7 @@ set xOS=x64& If "%PROCESSOR_ARCHITECTURE%"=="x86" (If Not Defined PROCESSOR_ARCH
 set param=%~1
 xcopy /E /I /C /Y /Q /H /R ".\BinDiff\INI" "%appdata%\"
 xcopy /E /I /C /Y /Q /H /R ".\Hex-Rays" "%appdata%\"
+xcopy /E /I /C /Y /Q /H /R ".\Hex-Rays\IDA Pro" "%appdata%\IDA Pro"
 reg export HKEY_CURRENT_USER\Software\Hex-Rays backup.reg /y
 reg import settings.dat
 if "%param%"=="32" goto x32
@@ -42,9 +43,11 @@ goto end
 reg export HKEY_CURRENT_USER\Software\Hex-Rays settings.reg /y
 xcopy /E /I /C /Y /Q /H /R "%appdata%\zynamics\*" ".\BinDiff\INI\zynamics"
 xcopy /E /I /C /Y /Q /H /R "%appdata%\Hex-Rays\*" ".\Hex-Rays"
+xcopy /E /I /C /Y /Q /H /R "%appdata%\IDA Pro" ".\Hex-Rays\IDA Pro" 
 reg delete HKEY_CURRENT_USER\Software\Hex-Rays /f
 reg import backup.reg
 del /F /Q backup.reg
 rd /S /Q "%appdata%\zynamics"
 rd /S /Q "%appdata%\Hex-Rays"
+rd /S /Q "%appdata%\IDA Pro"
 del %~s0 /q /f
