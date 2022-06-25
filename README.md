@@ -9,5 +9,3 @@ parameter could be:
 /32, -32, x32 means starting IDA in 32 bit mode
 /64, -64, x64 means starting IDA in 64 bit mode
 If parameter is omitted the mode will be the same as operating system.
-
-The proof it is not a virus - a digital sugnature of this file gjf.cer is for you to test it If you don't trust me - go away.
